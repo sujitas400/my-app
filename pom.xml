@@ -68,7 +68,7 @@
               <report>cobertura</report>
             </reports>
        <formats>
-           <format>html</format>
+            
            <format>xml</format>
        </formats>
     </configuration>
