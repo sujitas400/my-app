@@ -5,5 +5,4 @@ ENV PATH $CATALINA_HOME/bin:$PATH
 RUN mkdir -p "$CATALINA_HOME"
 WORKDIR $CATALINA_HOME
 ADD ./target/*.war $CATALINA_HOME/webapps/
-EXPOSE 8085
-CMD ["catalina.sh", "run"]
+
