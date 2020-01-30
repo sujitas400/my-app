@@ -1,5 +1,9 @@
 FROM tomcat:9
 # Take the war and copy to webapps of tomcat
-WORKDIR C:/Program Files/Apache Software Foundation/Tomcat 9.0
-COPY  ./target/myweb-0.0.7.war  ./webapps/
+ENV CATALINA_HOME C:/Program Files/Apache Software Foundation/Tomcat 9.0
+ENV PATH $CATALINA_HOME/bin:$PATH
+RUN mkdir -p "$CATALINA_HOME"
+WORKDIR $CATALINA_HOME
+ADD ./target/*.war $CATALINA_HOME/webapps/
 EXPOSE 8085
+CMD ["catalina.sh", "run"]
