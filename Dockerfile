@@ -1,5 +1,5 @@
 FROM tomcat:8
  
-COPY "target\*.war"  "C:\Program Files\ApacheSoftwareFoundation\Tomcat 8.5\webapps"
+COPY "target\*.war"  "C:\ProgramFiles\ApacheSoftwareFoundation\Tomcat8.5\webapps"
 EXPOSE 8086
 
